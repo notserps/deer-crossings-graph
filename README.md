@@ -1,6 +1,6 @@
 # Deer Crossings development graph
 
-This public repository hosts an interactive graph of the 121 versions in the Deer Crossings development history. It contains version names and descriptions only. The original mod source, packages, and assets remain in the [private archive](https://github.com/prestoncaisse/assetto-corsa-deer-mod), and file buttons require access to that repository.
+This public repository hosts the Deer Crossings version graph. The mod files remain in the [private repository](https://github.com/prestoncaisse/assetto-corsa-deer-mod), so the version-tree file buttons require access.
 
 [Open the interactive graph](https://prestoncaisse.github.io/deer-crossings-graph/)
 
