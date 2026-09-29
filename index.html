@@ -27,7 +27,7 @@ const PHASES=[{name:'Foundations',start:1,end:36,cx:210,cy:480,rx:170,ry:250},{n
 const MAJOR=new Set([1,3,16,23,36,37,43,58,59,62,69,70,87,88,90,91,95,99,100,101,113,114,118,119,120,121]);
 const ROLLBACK=new Set([3,17,70,88,100,119,120]);
 const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),urlpath=s=>s.split('/').map(encodeURIComponent).join('/');
-const svgNS='http://www.w3.org/2000',world=$('world'),graph=$('graph'),tooltip=$('tooltip');
+const svgNS='http://www.w3.org/2000/svg',world=$('world'),graph=$('graph'),tooltip=$('tooltip');
 const el=(name,attrs={},parent=world)=>{const x=document.createElementNS(svgNS,name);for(const [k,v] of Object.entries(attrs))x.setAttribute(k,v);parent.appendChild(x);return x};
 DATA.forEach(v=>{v.phase=PHASES.findIndex(p=>v.order>=p.start&&v.order<=p.end);const p=PHASES[v.phase],n=p.end-p.start+1,i=v.order-p.start,a=i*2.399963229728653,r=Math.sqrt((i+.5)/n);v.x=p.cx+Math.cos(a)*p.rx*r;v.y=p.cy+Math.sin(a)*p.ry*r});
 const clusterLayer=el('g'),edgeLayer=el('g'),nodeLayer=el('g');const edgeEls=[],nodeEls=[];
